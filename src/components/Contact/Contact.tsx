@@ -31,6 +31,8 @@ export default function Contact() {
   const form = useRef(null);
   const { ref, inView } = useInView();
 
+  console.log(form.current);
+
   const { theme } = useTheme();
   const { language } = useLanguage();
 
@@ -57,21 +59,23 @@ export default function Contact() {
       return setMessages({ ...messages, userMessage: true });
     }
 
-    emailjs
-      .sendForm(
-        'service_hc65hcq',
-        'template_2hzoihr',
-        form.current,
-        'BFi2Mqc76xuApjOW-'
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm(
+          'service_hc65hcq',
+          'template_2hzoihr',
+          form.current,
+          'BFi2Mqc76xuApjOW-'
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
 
     setInputValues(initialValues);
 
