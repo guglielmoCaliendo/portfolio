@@ -100,9 +100,11 @@ export const Container = styled.div<Props>`
   }
 
   .active {
-    background-color: ${(props) => darkToLight(props.myTheme)};
-    color: ${(props) => lightToDark(props.myTheme)};
-    transition: all 0.6 ease;
+    @media (min-width: 768px) {
+      background-color: ${(props) => darkToLight(props.myTheme)};
+      color: ${(props) => lightToDark(props.myTheme)};
+      transition: all 0.6 ease;
+    }
   }
 
   .links {

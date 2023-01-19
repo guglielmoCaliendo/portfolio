@@ -24,6 +24,7 @@ export default function NavBar() {
 
       <nav className={isActive ? 'links active' : 'links'}>
         <Link
+          onClick={() => setIsActive(isActive ? false : isActive)}
           activeClass='active'
           to='hero'
           spy={true}
@@ -34,6 +35,7 @@ export default function NavBar() {
         </Link>
 
         <Link
+          onClick={() => setIsActive(isActive ? false : isActive)}
           activeClass='active'
           to='projects'
           spy={true}
@@ -44,6 +46,7 @@ export default function NavBar() {
         </Link>
 
         <Link
+          onClick={() => setIsActive(isActive ? false : isActive)}
           activeClass='active'
           to='tools'
           spy={true}
@@ -54,6 +57,7 @@ export default function NavBar() {
         </Link>
 
         <Link
+          onClick={() => setIsActive(isActive ? false : isActive)}
           activeClass='active'
           to='bio'
           spy={true}
@@ -64,6 +68,7 @@ export default function NavBar() {
         </Link>
 
         <Link
+          onClick={() => setIsActive(isActive ? false : isActive)}
           activeClass='active'
           to='contact'
           spy={true}
