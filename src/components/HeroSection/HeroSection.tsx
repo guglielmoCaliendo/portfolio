@@ -32,7 +32,7 @@ export default function HeroSection() {
       </HiWrapper>
       <div className='based'>
         <p>{language === 'ES' ? 'asentado en' : `based in`}</p>
-        <p className='based-ubication'>Venezuela</p>
+        <p className='based-ubication'>{language === 'ES' ? 'España' : `Spain`}</p>
       </div>
     </Container>
   );
